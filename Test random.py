@@ -1,20 +1,14 @@
-from card_conv import card_conv
+n , m = map(int, input().split())
+# n은 행, m은 열
 
+result = 0
 
-if __name__ == '__main__':
+for i in range(n):
 
-    print('10진수를 n진수로 변환합니다')
+    data = list(map(int, input().split()))
 
-    while True:
-        while True:
-            no = int(input("변환할 값으로 음이 아닌 정수 입력:  "))
-            if no > 0:
-                break
+    min_value = min(data)
 
-        while True:
-            cd = int(input('어떤 진수로 변환할까요? : '))
-            if 2 <= cd <= 36:
-                break
-        print(f'{cd}진수로는 {card_conv(no,cd)}입니다')
+    result = max(result, min_value)
 
-
+print(result)
