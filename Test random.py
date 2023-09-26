@@ -1,14 +1,8 @@
-n , m = map(int, input().split())
-# n은 행, m은 열
 
-result = 0
+#N을 입력받기
+n = int(input("N을 입력 : "))
+x,y = 1,1
+plans = input().split()
 
-for i in range(n):
-
-    data = list(map(int, input().split()))
-
-    min_value = min(data)
-
-    result = max(result, min_value)
-
-print(result)
+#L,R,U,D 에 대한 이동 방햘
+dx = [0,0, -1, 1]
